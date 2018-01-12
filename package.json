@@ -1,0 +1,24 @@
+{
+  "name": "groupchatapp",
+  "version": "1.0.0",
+  "description": "a group chat application where many users can chat at the same place",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tanishq1g/GroupChatApp.git"
+  },
+  "author": "tanishq1g",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tanishq1g/GroupChatApp/issues"
+  },
+  "homepage": "https://github.com/tanishq1g/GroupChatApp#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.9"
+  }
+}
