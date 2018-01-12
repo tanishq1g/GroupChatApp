@@ -6,7 +6,7 @@ var methodOverride = require('method-override');
 
 
 
-//connecting to database
+//connecting tso database
 mongoose.connect("mongodb://localhost/yelp_camp_v");
 //setting up all rendered files to be ejs files
 app.set('view engine','ejs');
@@ -25,8 +25,22 @@ app.use(methodOverride('_method'));
 
 //add models here
 
-
+var Chat = require('./models/chat');
 
 
 
 //add routes here
+
+var indexRoutes = require("./routes/index");
+var chatRoutes = require("./routes/chats");
+
+
+app.use("/", indexRoutes);
+app.use("/chats", chatRoutes);
+
+
+
+
+app.listen(3000, function() {
+    console.log(" server has started!!!");
+});
