@@ -32,11 +32,11 @@ var Chat = require('./models/chat');
 //add routes here
 
 var indexRoutes = require("./routes/index");
-var chatRoutes = require("./routes/chats");
+// var chatRoutes = require("./routes/chats");
 
 
 app.use("/", indexRoutes);
-app.use("/chats", chatRoutes);
+// app.use("/chats", chatRoutes);
 
 
 
