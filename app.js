@@ -7,7 +7,7 @@ var methodOverride = require('method-override');
 
 
 //connecting tso database
-mongoose.connect("mongodb://localhost/yelp_camp_v");
+mongoose.connect("mongodb://localhost/GroupChatApp");
 //setting up all rendered files to be ejs files
 app.set('view engine','ejs');
 //for post routes
@@ -32,13 +32,37 @@ var Chat = require('./models/chat');
 //add routes here
 
 var indexRoutes = require("./routes/index");
-// var chatRoutes = require("./routes/chats");
+var chatRoutes = require("./routes/chats");
 
 
 app.use("/", indexRoutes);
-// app.use("/chats", chatRoutes);
+app.use("/chats", chatRoutes);
 
-
+var data = [
+    {
+        id : 0,
+        user_name: "tanishq",
+        user_comment: "hi baby",
+    },
+    {
+        id : 1,
+        user_name: "geetuu",
+        user_comment: "hey what's up ???",
+    }
+];
+data.forEach(function(seed){
+    Chat.create(seed,function(err, Chat){
+        if(err){
+            console.log("error while finding machines in seedDB");
+            console.log(err)
+        }
+        else {
+            console.log("added a chat");
+            machine.save();
+            console.log(Chat);
+        }
+    });
+});
 
 
 app.listen(3000, function() {

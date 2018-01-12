@@ -4,7 +4,7 @@ var router = express.Router();
 
 //Root route
 router.get("/",function(req,res){
-  res.render("landing");
+    res.render("landing");
 });
 
 
