@@ -1,4 +1,4 @@
-var chat_id = 0;
+var chat_id = -1;
 
 function update_chat(){
     $.ajax({
@@ -6,8 +6,9 @@ function update_chat(){
         type: 'get',
         contentType: 'application/json',
         success: function(response){
-            chat_id = chat_id + 1;
             console.log(response);
+            $('#chats').val( $('#chats').val() + response.chats[0].user_name + " : " + response.chats[0].user_comment + '\n');
+
         },
         error: function(error){
             console.log("some error occured"+error);

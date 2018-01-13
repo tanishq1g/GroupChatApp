@@ -51,15 +51,15 @@ var data = [
     }
 ];
 data.forEach(function(seed){
-    Chat.create(seed,function(err, Chat){
+    Chat.create(seed,function(err, chat){
         if(err){
             console.log("error while finding machines in seedDB");
             console.log(err)
         }
         else {
             console.log("added a chat");
-            machine.save();
-            console.log(Chat);
+            chat.save();
+            console.log(chat);
         }
     });
 });
