@@ -40,12 +40,12 @@ app.use("/chats", chatRoutes);
 
 var data = [
     {
-        id : 0,
+        id : 1,
         user_name: "tanishq",
         user_comment: "hi baby",
     },
     {
-        id : 1,
+        id : 2,
         user_name: "geetuu",
         user_comment: "hey what's up ???",
     }
@@ -53,8 +53,8 @@ var data = [
 data.forEach(function(seed){
     Chat.create(seed,function(err, chat){
         if(err){
-            console.log("error while finding machines in seedDB");
-            console.log(err)
+            console.log("error while creating chats in seedDB");
+            console.log(err);
         }
         else {
             console.log("added a chat");

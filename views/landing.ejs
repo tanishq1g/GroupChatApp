@@ -3,6 +3,9 @@
     <div class="h3">
         GroupChatApp
     </div>
+    <p class="chat_id">
+        0
+    </p>
     <form onsubmit="add_comment()">
         <div class="form-group">
             <label for="user_name">Username</label>
@@ -18,7 +21,7 @@
         </div>
         <%# <button type="submit" class="btn btn-primary" id="add">AddComment</button> %>
     </form>
-    <button type="submit" class="btn btn-primary" id="add" onclick="add_comment()">AddComment</button>
+    <button type="submit" class="btn btn-primary" id="add" onclick="return add_comment()">AddComment</button>
 </div>
 
 
