@@ -3,10 +3,10 @@
     <div class="h3">
         GroupChatApp
     </div>
-    <form>
+    <form onsubmit="add_comment()">
         <div class="form-group">
             <label for="user_name">Username</label>
-            <input type="user_name" class="form-control" id="username" placeholder="Enter user_name">
+            <input type="user_name" class="form-control" id="username" placeholder="Enter user_name"/>
         </div>
         <div class="form-group">
             <label for="chats">Chat</label>
@@ -14,10 +14,11 @@
         </div>
         <div class="form-group">
             <label for="add_comment">Add Comment</label>
-            <input type="email" class="form-control" id="add_comment">
+            <input  class="form-control" id="add_comment"/>
         </div>
-        <button type="submit" class="btn btn-primary" id="add">AddComment</button>
+        <%# <button type="submit" class="btn btn-primary" id="add">AddComment</button> %>
     </form>
+    <button type="submit" class="btn btn-primary" id="add" onclick="add_comment()">AddComment</button>
 </div>
 
 
